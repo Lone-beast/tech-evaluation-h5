@@ -8,5 +8,8 @@ export default defineConfig({
     port: 3000,
     open: true
   },
-  base: '/tech-evaluation-h5/' // 确保基础路径正确
+  base: '/tech-evaluation-h5/',
+  define: {
+    'process.env.NODE_ENV': JSON.stringify('production')
+  }
 })
