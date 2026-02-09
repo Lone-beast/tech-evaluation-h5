@@ -1,6 +1,21 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 
+// 安全的存储访问函数
+function safeStorage(key, value = null) {
+  try {
+    if (value !== null) {
+      localStorage.setItem(key, JSON.stringify(value));
+    } else {
+      const item = localStorage.getItem(key);
+      return item ? JSON.parse(item) : null;
+    }
+  } catch (e) {
+    console.warn('Storage access denied, using in-memory storage');
+    return null;
+  }
+}
+
 export const useEvaluationStore = defineStore('evaluation', () => {
   // 基础信息
   const grade = ref('')
