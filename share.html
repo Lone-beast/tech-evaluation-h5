@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>科技特长生评测H5 - 扫码体验</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 24px;
+      padding: 40px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 32px;
+    }
+
+    .qrcode-container {
+      background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      border: 2px dashed #ddd;
+    }
+
+    .qrcode-placeholder {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .qrcode-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .qrcode-text {
+      color: #999;
+      font-size: 14px;
+    }
+
+    .url-box {
+      background: #f5f5f5;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+
+    .url-label {
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .url-value {
+      font-size: 18px;
+      color: #FF6600;
+      font-weight: 700;
+      word-break: break-all;
+      line-height: 1.4;
+    }
+
+    .steps {
+      text-align: left;
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .step {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .step:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-number {
+      background: #FF6600;
+      color: white;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #FF6600 0%, #9900CC 100%);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .note {
+      font-size: 12px;
+      color: #999;
+      line-height: 1.6;
+    }
+
+    .footer {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+      font-size: 12px;
+      color: #999;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 24px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">🚀</div>
+    <h1>科技特长生评测H5</h1>
+    <p class="subtitle">扫码体验完整功能</p>
+
+    <div class="badge">✨ H5原型已就绪</div>
+
+    <div class="qrcode-container">
+      <div class="qrcode-placeholder">
+        <!-- 二维码将在这里显示 -->
+        <div class="qrcode-text">
+          📱<br>
+          使用二维码API<br>
+          或直接访问链接
+        </div>
+      </div>
+    </div>
+
+    <div class="url-box">
+      <div class="url-label">🔗 访问地址</div>
+      <div class="url-value">http://10.200.30.50:3000/</div>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <span class="step-number">1</span>
+        <span>确保手机和电脑连接同一WiFi</span>
+      </div>
+      <div class="step">
+        <span class="step-number">2</span>
+        <span>在手机浏览器中打开上方链接</span>
+      </div>
+      <div class="step">
+        <span class="step-number">3</span>
+        <span>开始体验科技特长生评测</span>
+      </div>
+    </div>
+
+    <div class="note">
+      ⚠️ 注意：服务器在本地运行，需要连接同一WiFi才能访问<br>
+      💻 开发环境：Vue 3 + Vant 4 + ECharts
+    </div>
+
+    <div class="footer">
+      生成时间：<span id="timestamp"></span>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('timestamp').textContent = new Date().toLocaleString('zh-CN');
+  </script>
+</body>
+</html>

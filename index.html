@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>科技特长生评测</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-orange: #FF6600;
+      --primary-blue: #0066CC;
+      --primary-purple: #9900CC;
+      --dark-gray: #333333;
+      --medium-gray: #666666;
+      --light-gray: #F5F5F5;
+      --white: #FFFFFF;
+      --success-green: #00CC66;
+      --warning-yellow: #FFBB00;
+    }
+
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      color: var(--dark-gray);
+      overflow-x: hidden;
+    }
+
+    #app {
+      max-width: 750px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* 动画定义 */
+    @keyframes slideInRight {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: -1000px 0;
+      }
+      100% {
+        background-position: 1000px 0;
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .slide-in-right {
+      animation: slideInRight 0.4s ease-out;
+    }
+
+    .slide-in-left {
+      animation: slideInLeft 0.4s ease-out;
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.5s ease-out;
+    }
+
+    .scale-in {
+      animation: scaleIn 0.3s ease-out;
+    }
+
+    .pulse-animation {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index-D8DF6HT4.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DGVKDQFS.css">
+</head>
+<body>
+  <div id="app"></div>
+</body>
+</html>
