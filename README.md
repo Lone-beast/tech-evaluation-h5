@@ -180,6 +180,7 @@ if (hasCodingExperience === false) {
 
 MIT
 
-```
+## 部署状态
 
-<* GitHub Pages + Cloudflare部署指南的链接 *>
+GitHub Pages 自动部署已配置，每次推送到 main 分支会自动更新。
+访问地址：https://lone-beast.github.io/tech-evaluation-h5/
