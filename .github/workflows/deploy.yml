@@ -29,17 +29,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           force_orphan: true
-          publish_branch: gh-pages// 在 evaluation.js 文件开头添加
-function safeStorage(key, value = null) {
-  try {
-    if (value !== null) {
-      localStorage.setItem(key, JSON.stringify(value));
-    } else {
-      const item = localStorage.getItem(key);
-      return item ? JSON.parse(item) : null;
-    }
-  } catch (e) {
-    console.warn('Storage access denied, using in-memory storage');
-    return null;
-  }
-}
+          publish_branch: gh-pages
